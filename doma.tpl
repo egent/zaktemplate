@@ -1,0 +1,89 @@
+{% extends "template.tpl" %}
+
+{% block top_title %}Дома. Коттеджи. Дачи.
+{% endblock %}
+{% block title %}Продажа домов, коттеджей в Набережных Челнах.{% endblock %}
+{% block header %}Дома, коттеджи.{% endblock %}
+{% block side %}{% endblock %}
+{% block content_width %}style="width:100%"{% endblock %}
+{% block body %}
+<table align="right"><tr>
+  <td width="200" align="left">
+  <a href="#" id="cleanfilters" onClick="return false;">Убрать фильтры поиска</a>
+  </td>
+  <td width="120">
+  <div style="width:130px; overflow:hidden;">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ru">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  </div>
+  </td>
+  <td width="120">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=186670831361604";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div class="fb-like" data-href="<?=$thisurl?>" data-send="false" data-layout="button_count" data-width="135" data-show-faces="true" data-font="tahoma"></div>
+  </td>
+  <td width="120">
+  <script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>
+  <script type="text/javascript"><!--
+  document.write(VK.Share.button(false,{type: "round", text: "Сохранить"}));
+  --></script>
+  </td>
+</tr></table>
+Красивое <a href="http://www.lodg.ru/kott.html">остекление коттеджей</a> на зависть соседям.<br />
+<br class="clear">
+<small>всего {{ total }} объявлений</small><br>
+<div id="inprogress">Секундочку...</div>
+<table id="myTable" class="items tablesorter" style="width:100%"> 
+<thead> 
+<tr>
+<th filter-type='ddl'>Дата</th>
+<th filter-type='ddl'>Населенный пункт</th>
+<th>Участок <br />(соток)</th>
+<th>Этаж</th>
+<th>Площадь</th>
+<th>Тип дома</th>
+<th>Отоп. Элек.</th>
+<th>ВО+</th>
+<th>Информация</th>
+<th>Цена</th>
+</tr>
+</thead>
+<tbody>
+{% for item in items %}
+<tr>
+<td>{{ item.date|date("d.m.Y") }}</td>
+<td>
+{{ item.object }} {{ item.adres|replace({',': ', ', '.': '. '}) }}
+</td> 
+<td>{{ item.sotki }}</td>
+<td>{{ item.floor }}</td>
+<td>{{ item.square }}</td>
+
+<td>{{ item.type_house }}</td>
+<td>{{ item.otop != '+' ? '-' : '+' }} / {{ item.elect != '+' ? '-' : '+'}}</td>
+<td>{{ item.vo != '+' ? '-' : '+' }}</td>
+<td>
+{{ item.firm }}<br />
+{{ item.firm_tel|replace({',':' ' , '.':" " , ';':" " , '=':" "}) }}<br />
+</td>
+<td>
+<strong>{{ item.price|replace({'торг':' торг'}) }}</strong>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{# <div class="pagenator">
+{% autoescape false %}
+{{ pager }}
+{% endautoescape %}
+</div>#}
+<div id="left_banner"></div>
+{% endblock %}
+{% block footer_text %}Продажа домов, коттеджей, дачь, гаражей в Наб Челнах. Земля. Продам земельные участки.{% endblock %}
