@@ -60,9 +60,9 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h2>{% block header %}Добро пожаловать в мир недвижимости города Набережные Челны{% endblock %}</h2>
+        <p class="lead"></p>
+        <p><a class="btn btn-lg btn-success" href="/add/" role="button">Разместить объявление</a></p>
       </div>
 
      
