@@ -9,13 +9,76 @@
     <link rel="icon" href="./favicon.ico">
 
     <title>{% block title %}Мир недвижимости Набережные Челны. Недвижимость в Набережных Челнах. Квартиры в Набережных Челнах.{% endblock %}</title>
-
+    
+    <meta name="description" content="{% block desc %}Мир недвижимости Набережные Челны: вторичное жилье, квартиры, малосемееки, дома, котеджи, дачи в городе Набережные Челны. Весь мир недвижимости. Из рук в руки Набережные Челны.{% endblock %}">
+    <meta name="keywords" content="{% block key %}мир, недвижимости, набережные, челны, недвижимость, вторичное, жилье, продажа, покупка, квартиры, комнаты, дома, дачи, гаражи{% endblock %}">
+    <meta name="verify-admitad" content="1b0e7913ce" />
+    <meta name='yandex-verification' content='5f0c8e634ecef34b' />    
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     
     <!-- Zakamie theme -->
     <link rel="stylesheet" href="/css/template.css">
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+      	  {% block menu %}
+          {#<li{% if(it == 1) %} class="active"{% endif %}><a href="/">Главная</a></li>#}
+            <li role="presentation" class="dropdown" {% if(it > 8) %} class="active"{% endif %}>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              Квартиры <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/flats/malo/">малосемейки</a></li>  
+                <li><a href="/flats/one/">однокомнатные</a></li>
+                <li><a href="/flats/two/">двухкомнатные</a></li>
+                <li><a href="/flats/three/">трехкомнатные</a></li>
+                <li><a href="/flats/four/">четырехкомнатные</a></li>                    
+                <li><a href="/flats/more/">многокомнатные</a></li>    
+            </ul>
+            </li>        
+            <li{% if(it == 3) %} class="active"{% endif %}><a href="/doma/">Дома</a></li>
+            <li{% if(it == "d") %} class="active"{% endif %}><a href="/dachi/">Дачи</a></li> 
+            <li{% if(it == "l") %} class="active"{% endif %}><a href="/lands/">Участки</a></li>             
+            <li{% if(it == "g") %} class="active"{% endif %}><a href="/garage/">Гаражи</a></li>                     
+            <li{% if(it == 4) %} class="active"{% endif %}><a href="/comm/" title="Коммерческая недвижимость">Коммерческая</a></li>
+            <li class="green{% if(it == 5) %} active{% endif %}"><a href="/objects/">Объявления</a></li>
+            {# <li class="green{% if(it == 6) %} active{% endif %}"><a href="/add/"><strong>+ добавить</strong></a></li> #}
+            <li{% if(it == "fo") %} class="active"{% endif %}><a href="/forum/">Форум</a></li>
+            <li><a href="/agency/">Агентства</a></li>
+	      {% endblock %}
+	      </ul>
+        </nav>
+        <h3 class="text-muted">Z</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+
+     
+      <div class="row marketing">
+        {% block message %}{% endblock %}
+        {% block body %}{% endblock %}
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Zakamie 2014</p>
+        <p><small>{% block footer_text %}{% endblock %}</small></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+	<script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -25,59 +88,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="container">
-      <div class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <p>&copy; Zakamie 2014</p>
-      </footer>
-
-    </div> <!-- /container -->
-
+    <![endif]-->    
 
     {# <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> #}

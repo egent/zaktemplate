@@ -109,13 +109,13 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         </li>
         <li{% if(it == 3) %} class="cur"{% endif %}><a href="/doma/">Дома</a></li>
         <li{% if(it == "d") %} class="cur"{% endif %}><a href="/dachi/">Дачи</a></li> 
-				<li{% if(it == "l") %} class="cur"{% endif %}><a href="/lands/">Участки</a></li>             
-				<li{% if(it == "g") %} class="cur"{% endif %}><a href="/garage/">Гаражи</a></li>                     
+		<li{% if(it == "l") %} class="cur"{% endif %}><a href="/lands/">Участки</a></li>             
+		<li{% if(it == "g") %} class="cur"{% endif %}><a href="/garage/">Гаражи</a></li>                     
         <li{% if(it == 4) %} class="cur"{% endif %}><a href="/comm/">Коммерческая недвижимость</a></li>
         <li class="green{% if(it == 5) %} cur{% endif %}"><a href="/objects/">Объявления</a></li>
         <li class="green{% if(it == 6) %} cur{% endif %}"><a href="/add/"><strong>+ добавить</strong></a></li>
         <li{% if(it == "fo") %} class="cur"{% endif %}><a href="/forum/">Форум</a></li>
-     		<li><a href="/agency/">Агентства</a></li>
+     	<li><a href="/agency/">Агентства</a></li>
       </ul>
       {% endblock %}
 			</nav>
