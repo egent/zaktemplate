@@ -14,13 +14,12 @@
 <tr>
 <th>Дата</th>
 <th>Населенный пункт</th>
-<th>Участок <br />(соток)</th>
+<th>Сотоки</th>
 <th>Этаж</th>
 <th>Пл.</th>
-<th>Тип дома</th>
 <th>Отоп. Элек.</th>
 <th>ВО+</th>
-<th>Информация</th>
+<th>Контакты</th>
 <th>Цена</th>
 </tr>
 </thead>
@@ -34,8 +33,6 @@
 <td>{{ item.sotki }}</td>
 <td>{{ item.floor }}</td>
 <td>{{ item.square }}</td>
-
-<td>{{ item.type_house }}</td>
 <td>{{ item.otop != '+' ? '-' : '+' }} / {{ item.elect != '+' ? '-' : '+'}}</td>
 <td>{{ item.vo != '+' ? '-' : '+' }}</td>
 <td>
