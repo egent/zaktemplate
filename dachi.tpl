@@ -1,24 +1,22 @@
 {% extends "template.tpl" %}
 
-{% block top_title %}Дачи в Набережных Челнах
-{% endblock %}
-{% block title %}Дачи в Набережных Челнах.{% endblock %}
-{% block header %}Продажа дач в Набережных Челнах{% endblock %}
+{% block top_title %}Дачи{% endblock %}
+{% block title %}Дачи в Набережных Челнах{% endblock %}
+{% block header %}Дачи в Набережных Челнах{% endblock %}
 {% block side %}{% endblock %}
 {% block content_width %}style="width:100%"{% endblock %} 
 {% block body %}
 
-<small>всего {{ total }} объявлений</small><br>
-
+<p>всего {{ total }} объявлений</p>
 <table class="table table-bordered table-striped table-condensed">
 <thead> 
 <tr>
 <th filter-type='ddl'>Дата</th>
 <th filter-type='ddl'>Садовое общество</th>
 <th>Сотки</th>
-<th>Этаж</th>
-<th>Площадь</th>
-<th>Тип дома</th>
+<th>Дом</th>
+<th>Эл.</th>
+<th>Вода</th>
 <th>Описание</th>
 <th>Цена</th>
 </tr>
@@ -32,10 +30,10 @@
 {{ item.adres|replace({',': ', ', '.': '. '}) }}
 </td> 
 <td>{{ item.sotki }}</td>
-<td>{{ item.floor }}</td>
 <td>{{ item.square }}</td>
+<td>{{ item.elect }}</td>
+<td>{{ item.vo }}</td>
 
-<td>{{ item.type_house }}</td>
 <td><small>{{ item.comment }}</small><br><br>
 {{ item.firm }}<br />
 {{ item.firm_tel|replace({',':' ' , '.':" " , ';':" " , '=':" "}) }}<br />

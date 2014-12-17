@@ -1,7 +1,6 @@
 {% extends "template.tpl" %}
 
-{% block top_title %}Дома. Коттеджи. Дачи.
-{% endblock %}
+{% block top_title %}Дома. Коттеджи. Дачи.{% endblock %}
 {% block title %}Продажа домов, коттеджей в Набережных Челнах.{% endblock %}
 {% block header %}Дома, коттеджи.{% endblock %}
 {% block side %}{% endblock %}
@@ -12,13 +11,12 @@
 <table class="table table-bordered table-striped table-condensed">
 <thead> 
 <tr>
-<th>Дата</th>
 <th>Населенный пункт</th>
 <th>Сотоки</th>
 <th>Этаж</th>
 <th>Пл.</th>
 <th>Отоп. Элек.</th>
-<th>ВО+</th>
+<th>Вода</th>
 <th>Контакты</th>
 <th>Цена</th>
 </tr>
@@ -26,7 +24,6 @@
 <tbody>
 {% for item in items %}
 <tr>
-<td>{{ item.date|date("d.m.Y") }}</td>
 <td>
 {{ item.object }} {{ item.adres|replace({',': ', ', '.': '. '}) }}
 </td> 

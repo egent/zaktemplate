@@ -51,7 +51,7 @@
             <li{% if(it == 4) %} class="active"{% endif %}><a href="/comm/" title="Коммерческая недвижимость">Коммерческая</a></li>
             <li class="green{% if(it == 5) %} active{% endif %}"><a href="/objects/">Объявления</a></li>
             {# <li class="green{% if(it == 6) %} active{% endif %}"><a href="/add/"><strong>+ добавить</strong></a></li> #}
-            <li><a href="/agency/">Агентства</a></li>
+            <li{% if(it == "ag") %} class="active"{% endif %}><a href="/agency/">Агентства</a></li>
 	      {% endblock %}
 	      </ul>
         </nav>

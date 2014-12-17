@@ -1,4 +1,4 @@
-    <p><small>всего {{ total }} объявлений</small></p>
+    <p>всего {{ total }} объявлений</p>
     <table class="table table-bordered table-striped table-condensed"> 
     <thead> 
     <tr>
