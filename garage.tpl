@@ -1,10 +1,9 @@
 {% extends "template.tpl" %}
 
-{% block top_title %}Гаражи в Набережных Челнах
-<br /><small><a href="/">недвижимость в Набережных Челнах</a></small>
+{% block top_title %}Гаражи</small>
 {% endblock %}
 {% block title %}Гаражи. боксы в Набережных Челнах.{% endblock %}
-{% block header %}Продажа недвижимости в Набережных Челнах{% endblock %}
+{% block header %}Гаражи, машиноместа, автостоянка{% endblock %}
 {% block side %}{% endblock %}
 {% block content_width %}style="width:100%"{% endblock %}
 {% block body %}
