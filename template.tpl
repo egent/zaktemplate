@@ -17,7 +17,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.min.css">
     
     
     <!-- Zakamie theme -->
@@ -93,5 +93,8 @@
 
     {# <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> #}
+
+	<script src="/js/base.js"></script>
+
   </body>
 </html>

@@ -2,13 +2,13 @@
     <table class="table table-bordered table-striped table-condensed"> 
     <thead> 
     <tr>
-    <th filter-type='ddl'>Дата</th>
     <th filter-type='ddl'>Адрес</th>
     <th>Этаж</th>
     <th>Площадь</th>
     <th>Балкон</th>
-    <th>Контакты</th>
-    <th>ЦЕНА</th>
+    <th>Описание</th>
+    <th>Цена</th>
+    <th></th>
     </tr>
     </thead>
     <tbody>
@@ -36,23 +36,21 @@
     </script>
     </td></tr>
     {% endif %}
-    <tr>
-    <td align="center">
-    <small style="color:#999; font-size:9px;">{{ item.date|date("d.m.Y") }}</small>
-    </td>
+    <tr valign="middle">
     <td align="center">
     {{ item.adres|replace({'/ ': '/'}) }}
     </td> 
     <td>{{ item.floor }}</td>
     <td>{{ item.square }}</td>
     <td>{{ item.balcon }}</td>
-    <td>{{ item.firm }} {{ item.firm_tel }} <br />
-    <span style="color:#999;">{{ item.comment|replace({',': ', ', '.': ". "}) }}</span><br>
-    Т.точка: {{ item.tel }}<br>
-    Ж.дверь: {{ item.door }}
+    <td>    
+    {{ item.comment|replace({',': ', ', '.': ". "}) }}
     </td>
     <td>
     <strong>{{ item.price|replace({'догов': 'Договорная', 'дог': 'Договорная'}) }}</strong>
+    </td>
+    <td>
+    <button type="button" class="ppvr" data-placement="left" data-content="<p>{{ item.firm }}</p><p>{{ item.firm_tel }}</p>"><i class="glyphicon glyphicon-earphone"></i></button>
     </td>
     </tr>
     {% endfor %}
