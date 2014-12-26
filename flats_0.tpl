@@ -1,11 +1,7 @@
 {% extends "template.tpl" %}
 
 {% block title %}Малосемейки — продажа малосемеек в Набережных Челнах{% endblock %}
-{% block header %}Малосемейки — продажа малосемеек в Набережных Челнах{% endblock %}
-
-{% block submenu %}
-{% include 'rooms_menu.tpl' %}
-{% endblock %}
+{% block header %}Малосемейки{% endblock %}
 
 {% block body %}
 {% include 'items.tpl' %}

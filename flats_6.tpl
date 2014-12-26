@@ -4,7 +4,7 @@
 <br /><small><a href="/">Мир недвижимости Набережные Челны</a></small>
 {% endblock %}
 {% block title %}Многокомнатные квартиры в Набережных Челнах{% endblock %}
-{% block header %}Продажа многокомнатных квартир в Набережных Челнах{% endblock %}
+{% block header %}Многокомнатные квартиры{% endblock %}
 
 {% block submenu %}
 {% include 'rooms_menu.tpl' %}

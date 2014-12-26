@@ -4,7 +4,7 @@
 <br /><small><a href="/">Мир недвижимости Набережные Челны</a></small>
 {% endblock %}
 {% block title %}Двухкомнатные квартиры в Набережных Челнах продажа{% endblock %}
-{% block header %}Двухкомнатные квартиры в Набережных Челнах{% endblock %}
+{% block header %}Двухкомнатные квартиры{% endblock %}
 
 {% block submenu %}
 {% include 'rooms_menu.tpl' %}
