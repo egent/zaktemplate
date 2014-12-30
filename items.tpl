@@ -5,6 +5,7 @@
     <a href="/flats/three/" class="btn btn-success btn-xs">3х</a>
     <a href="/flats/four/" class="btn btn-success btn-xs">4х</a>
     <a href="/flats/more/" class="btn btn-success btn-xs">>4</a>
+    <button type="button" class="reset btn btn-primary btn-xs" data-column="0" data-filter=""><i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Отмена фильтров</button>
     </p>
     <br clear="all">
     <table class="table table-bordered table-striped table-condensed"> 
@@ -68,7 +69,7 @@
     </td> 
     <td>{{ item.floor }}</td>
     <td>{{ item.square }}</td>
-    <td>{{ item.balcon }}</td>
+    <td align="center">{{ item.balcon }}</td>
     <td>    
     <span class="hidden-xs">{{ item.comment|replace({',': ', ', '.': ". "}) }}</span>    
     <i class="btn ppvr visible-xs-block glyphicon glyphicon-info-sign" data-placement="top" data-content="{{ item.comment|replace({',': ', ', '.': ". "}) }}"></i>
@@ -83,8 +84,3 @@
     {% endfor %}
     </tbody>
     </table>
-    {# <div class="pagenator">
-    {% autoescape false %}
-    {{ pager }}
-    {% endautoescape %}
-    </div> #}

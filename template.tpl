@@ -22,11 +22,8 @@
     <link rel="stylesheet" href="/assets/css/template.css">
 
   </head>
-
   <body>
-
-    <div class="container">
-             
+    <div class="container">             
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,24 +35,23 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-th-large"></i></a>
-            </div>
-        
+            </div>        
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                   {% block menu %}
                   {#<li{% if(it == 1) %} class="active"{% endif %}><a href="/">Главная</a></li>#}
-                    <li role="presentation" class="dropdown" {% if(it > 8) %} class="active"{% endif %}>
+                    <li role="presentation" class="dropdown {% if(it > 8) %} active{% endif %}">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                       Квартиры <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/flats/malo/">малосемейки</a></li>  
-                        <li><a href="/flats/one/">однокомнатные</a></li>
-                        <li><a href="/flats/two/">двухкомнатные</a></li>
-                        <li><a href="/flats/three/">трехкомнатные</a></li>
-                        <li><a href="/flats/four/">четырехкомнатные</a></li>                    
-                        <li><a href="/flats/more/">многокомнатные</a></li>    
+                        <li{% if(it == 10) %} class="active"{% endif %}><a href="/flats/malo/">малосемейки</a></li>  
+                        <li{% if(it == 11) %} class="active"{% endif %}><a href="/flats/one/">однокомнатные</a></li>
+                        <li{% if(it == 12) %} class="active"{% endif %}><a href="/flats/two/">двухкомнатные</a></li>
+                        <li{% if(it == 13) %} class="active"{% endif %}><a href="/flats/three/">трехкомнатные</a></li>
+                        <li{% if(it == 14) %} class="active"{% endif %}><a href="/flats/four/">четырехкомнатные</a></li>                    
+                        <li{% if(it == 16) %} class="active"{% endif %}><a href="/flats/more/">многокомнатные</a></li>    
                     </ul>
                     </li>        
                     <li{% if(it == 3) %} class="active"{% endif %}><a href="/doma/">Дома</a></li>
@@ -71,8 +67,6 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
-      
-
    
       <div class="row" style="min-height:300px;">
         {% block message %}{% endblock %}
