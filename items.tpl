@@ -1,4 +1,4 @@
-    <p class="pull-left">всего {{ total }} объявлений</p>
+    {# <p class="pull-left">{{ total }} объявлений</p> #}
     <p class="pull-right">
     <a href="/flats/one/" class="btn btn-success btn-xs">1к</a>
     <a href="/flats/two/" class="btn btn-success btn-xs">2х</a>
@@ -8,10 +8,10 @@
     <button type="button" class="reset btn btn-primary btn-xs" data-column="0" data-filter=""><i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Отмена фильтров</button>
     </p>
     <br clear="all">
-    <table class="table table-bordered table-striped table-condensed"> 
+    <table class="table table-bordered table-condensed"> 
     <thead> 
     <tr>
-    <th class="filter-select filter-exact" data-placeholder="Выбрать">Адрес</th>
+    <th class="{# filter-select filter-exact #}" data-placeholder="Выбрать">Адрес</th>
     <th>Этаж</th>
     <th class="sorter-false filter-false">Пл<span class="hidden-xs">ощадь</span></th>
     <th class="sorter-false filter-false" width="10">Бал<span class="hidden-xs">кон</span></th>

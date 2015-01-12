@@ -70,7 +70,7 @@
    
       <div class="row" style="min-height:300px;">
         {% block message %}{% endblock %}
-        <h1 class="text-center">{% block header %}Добро пожаловать в мир недвижимости города Набережные Челны{% endblock %}</h1>
+        <h3 class="text-center">{% block header %}Добро пожаловать в мир недвижимости города Набережные Челны{% endblock %}</h3>
         <div id="body" style="display:none">
         {% block body %}{% endblock %}
         </div>
